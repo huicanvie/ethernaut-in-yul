@@ -1,2 +1,8 @@
-# ethernaut-in-yul
-Pure Yul exploits for OpenZeppelin's Ethernaut. No Solidity overhead. A deep dive into low-level EVM security and memory management
+# 🛡️ Ethernaut in Yul
+
+> **"Solidity hides the machine. Yul reveals it."**
+
+A collection of **pure Assembly** solutions for OpenZeppelin's Ethernaut CTF.
+Demonstrating how to interact directly with the Stack, Memory, and Storage to achieve **maximum efficiency** and **surgical precision**.
+
+---
