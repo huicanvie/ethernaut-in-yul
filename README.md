@@ -1,5 +1,7 @@
 # 🛡️ Ethernaut in Yul
 
+![Ethernaut Cover](./ethernaut-in-yul.png)
+
 > **"Solidity hides the machine. Yul reveals it."**
 
 A collection of **pure Assembly** solutions for OpenZeppelin's Ethernaut CTF.
