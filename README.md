@@ -1,23 +1,66 @@
+## Foundry
 
-<div align="center">
-  <img src="./ethernaut-in-yul.png" width="100%" alt="Ethernaut in Yul Cover" />
-  <br/>
-  <br/>
-  <h3>
-    <i>"Solidity hides the machine. Yul reveals it."</i>
-  </h3>
-  <img src="https://img.shields.io/badge/Language-Yul-0088cc?style=flat-square" />
-  <img src="https://img.shields.io/badge/EVM-Assembly-black?style=flat-square" />
-  <img src="https://img.shields.io/badge/Gas-Optimized-success?style=flat-square" />
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-  <br/>
-  <br/>
-  <p align="center">
-    A collection of <b>pure Assembly solutions</b> for OpenZeppelin's Ethernaut CTF.<br/>
-    Demonstrating how to interact directly with the Stack, Memory, and Storage <br/>
-    to achieve <b>maximum efficiency</b> and <b>surgical precision</b>.
-  </p>
+Foundry consists of:
 
-</div>
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
----
+## Documentation
+
+https://book.getfoundry.sh/
+
+## Usage
+
+### Build
+
+```shell
+$ forge build
+```
+
+### Test
+
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
