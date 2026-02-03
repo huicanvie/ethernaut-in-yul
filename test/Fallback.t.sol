@@ -5,20 +5,21 @@ import "forge-std/Test.sol";
 import "./YulDeployer.sol";
 import {Fallback} from "../src/fallback/Fallback.sol";
 
-interface iAttacker {
-  function attack() external;
+interface IFallbackAttack {
+  function attack(address target) external payable returns (bool);
 }
 
 contract FallbackTest is Test, YulDeployer {
   Fallback public fb;
-  iAttacker  public attacker;
+  IFallbackAttack public attacker;
 
   function setUp() public {
     fb = new Fallback();
-    attacker = iAttacker(deployYul("FallbackAttack"));
+    attacker = IFallbackAttack(deployYul("fallback/FallbackAttack"));
+    vm.deal(address(attacker), 1 ether);
   }
 
   function testAttack() public {
-    attacker.attack();
+   attacker.attack{value: 1 ether}(address(fb));
   }
 }
