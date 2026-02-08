@@ -1,5 +1,7 @@
 /**
- * [Attack contract for Fallback challenge]
+ * [Impact]: High
+ * [Likelihood]: High
+ * [Poc]:
  * 1. The `receive` function is designed to receive plain transfers (transfer, send, call("")). 
  * 2. To satisfy the condition `contributions[msg.sender] > 0`, we first call `contribute()` with a transfer amount less than 0.001 ether. 
  * 3. Then, we perform a plain transfer operation: `token.call{value: 0.001 ether}("")`. 
