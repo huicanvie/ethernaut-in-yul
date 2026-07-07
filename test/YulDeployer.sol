@@ -17,7 +17,7 @@ contract YulDeployer is Test {
         // 2. grep/tail extract pure hex string
         // 3. tr -d remove newline characters
         string memory bashCommand = string.concat(
-            "solc --strict-assembly --bin src/", 
+            "solc --strict-assembly --bin yul/", 
             fileName, 
             ".yul | grep -A1 Binary | tail -n1 | tr -d '\n'"
         );
